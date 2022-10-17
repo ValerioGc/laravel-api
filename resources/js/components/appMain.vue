@@ -24,7 +24,14 @@
                 lastPage: null,
                 loading: true
             }
-        }
+        },
+        mounted() {
+
+        },
+        methods:{
+
+        },
+
     }
 </script>
 
