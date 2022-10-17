@@ -44,7 +44,7 @@
                 loading: true
             }
         },
-        mounted() {this.getPosts(100);},
+        mounted() {this.getPosts(1);},
         methods:{
             async getPosts(pageNumber) {
                 this.loading = true;
