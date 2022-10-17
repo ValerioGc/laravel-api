@@ -1,7 +1,9 @@
 <template>
     <body>
         <appHeader />
-        <appMain />
+        <div class="wrapper">
+            <appMain />
+        </div>
     </body>
 </template>
 
@@ -19,4 +21,39 @@
     }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    ul {
+        list-style: none;
+
+
+        li:hover,
+        a:hover {
+            text-decoration: none!important;
+
+
+        }
+    }
+    body {
+        font-family: 'Open Sans', sans-serif;
+        overflow-y: hidden;
+    }
+
+    .wrapper {
+        scroll-behavior: smooth;
+        width: 100vw;
+        height: 100vh;
+        overflow-y: scroll;
+    }
+
+    .show {
+        display: inline-block!important;
+    }
+
+</style>

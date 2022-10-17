@@ -11,13 +11,13 @@ class PostController extends Controller
 
     public function index()
     {
-        $posts = Post::with(['category', 'tags'])->paginate(5);
+        $posts = Post::with(['category', 'tags'])->paginate(6);
 
         foreach ($posts as $post) {
             if ($post->cover) {
                 $post->cover = asset('storage/' . $post->cover);
             } else {
-                $post->cover = ' https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg';
+                $post->cover = 'https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg';
             }
         }
 
@@ -27,8 +27,9 @@ class PostController extends Controller
         ]);
     }
 
-    public function show($slug)
+    public function show($id)
     {
+        //
     }
 
 }
